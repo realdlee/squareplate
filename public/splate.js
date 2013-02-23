@@ -1,7 +1,7 @@
 var json  = {} ;
 
 function load_data() {
-    new Ajax.Request('data/report.json', {
+    new Ajax.Request('public/sample-report.json', {
         method:'get',
         onSuccess: function(transport){
             json = transport.responseText.evalJSON();
