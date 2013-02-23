@@ -1,0 +1,185 @@
+<h1>Listing certifications</h1>
+
+<table>
+  <tr>
+    <th>Business</th>
+    <th>Cert date</th>
+    <th>Expiry date</th>
+    <th>Mand1</th>
+    <th>Mand2</th>
+    <th>Mand3</th>
+    <th>Mand4</th>
+    <th>Mand5</th>
+    <th>Safety1 c</th>
+    <th>Safety1 d</th>
+    <th>Nutrition1 c</th>
+    <th>Nutrition1 d</th>
+    <th>Nutrition2 c</th>
+    <th>Nutrition2 d</th>
+    <th>Nutrition3 c</th>
+    <th>Nutrition3 d</th>
+    <th>Nutrition4 c</th>
+    <th>Nutrition4 d</th>
+    <th>Nutrition5 c</th>
+    <th>Nutrition5 d</th>
+    <th>Labor1 c</th>
+    <th>Labor1 d</th>
+    <th>Labor2 c</th>
+    <th>Labor2 d</th>
+    <th>Labor3 c</th>
+    <th>Labor3 d</th>
+    <th>Labor4 c</th>
+    <th>Labor4 d</th>
+    <th>Labor5 c</th>
+    <th>Labor5 d</th>
+    <th>Labor6 c</th>
+    <th>Labor6 d</th>
+    <th>Labor7 c</th>
+    <th>Labor7 d</th>
+    <th>Community1 c</th>
+    <th>Community1 d</th>
+    <th>Community2 c</th>
+    <th>Community2 d</th>
+    <th>Community3 c</th>
+    <th>Community3 d</th>
+    <th>Community4 c</th>
+    <th>Community4 d</th>
+    <th>Source1 c</th>
+    <th>Source1 d</th>
+    <th>Conserv1 c</th>
+    <th>Conserv1 d</th>
+    <th>Conserv2 c</th>
+    <th>Conserv2 d</th>
+    <th>Conserv3 c</th>
+    <th>Conserv3 d</th>
+    <th>Conserv4 c</th>
+    <th>Conserv4 d</th>
+    <th>Conserv5 c</th>
+    <th>Conserv5 d</th>
+    <th>Conserv6 c</th>
+    <th>Conserv6 d</th>
+    <th>Conserv7 c</th>
+    <th>Conserv7 d</th>
+    <th>Conserv8 c</th>
+    <th>Conserv8 d</th>
+    <th>Conserv9 c</th>
+    <th>Conserv9 d</th>
+    <th>Conserv10 c</th>
+    <th>Conserv10 d</th>
+    <th>Conserv11 c</th>
+    <th>Conserv11 d</th>
+    <th>Conserv12 c</th>
+    <th>Conserv12 d</th>
+    <th>Conserv13 c</th>
+    <th>Conserv13 d</th>
+    <th>Conserv14 c</th>
+    <th>Conserv14</th>
+    <th>Optn1 c</th>
+    <th>Optn1 d</th>
+    <th>Optn2 c</th>
+    <th>Optn2 d</th>
+    <th>Optn3 c</th>
+    <th>Optn3 d</th>
+    <th>Optn4 c</th>
+    <th>Optn4 d</th>
+    <th>Optn5 c</th>
+    <th>Optn5 d</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @certifications.each do |certification| %>
+  <tr>
+    <td><%= certification.business_id %></td>
+    <td><%= certification.cert_date %></td>
+    <td><%= certification.expiry_date %></td>
+    <td><%= certification.mand1 %></td>
+    <td><%= certification.mand2 %></td>
+    <td><%= certification.mand3 %></td>
+    <td><%= certification.mand4 %></td>
+    <td><%= certification.mand5 %></td>
+    <td><%= certification.safety1_c %></td>
+    <td><%= certification.safety1_d %></td>
+    <td><%= certification.nutrition1_c %></td>
+    <td><%= certification.nutrition1_d %></td>
+    <td><%= certification.nutrition2_c %></td>
+    <td><%= certification.nutrition2_d %></td>
+    <td><%= certification.nutrition3_c %></td>
+    <td><%= certification.nutrition3_d %></td>
+    <td><%= certification.nutrition4_c %></td>
+    <td><%= certification.nutrition4_d %></td>
+    <td><%= certification.nutrition5_c %></td>
+    <td><%= certification.nutrition5_d %></td>
+    <td><%= certification.labor1_c %></td>
+    <td><%= certification.labor1_d %></td>
+    <td><%= certification.labor2_c %></td>
+    <td><%= certification.labor2_d %></td>
+    <td><%= certification.labor3_c %></td>
+    <td><%= certification.labor3_d %></td>
+    <td><%= certification.labor4_c %></td>
+    <td><%= certification.labor4_d %></td>
+    <td><%= certification.labor5_c %></td>
+    <td><%= certification.labor5_d %></td>
+    <td><%= certification.labor6_c %></td>
+    <td><%= certification.labor6_d %></td>
+    <td><%= certification.labor7_c %></td>
+    <td><%= certification.labor7_d %></td>
+    <td><%= certification.community1_c %></td>
+    <td><%= certification.community1_d %></td>
+    <td><%= certification.community2_c %></td>
+    <td><%= certification.community2_d %></td>
+    <td><%= certification.community3_c %></td>
+    <td><%= certification.community3_d %></td>
+    <td><%= certification.community4_c %></td>
+    <td><%= certification.community4_d %></td>
+    <td><%= certification.source1_c %></td>
+    <td><%= certification.source1_d %></td>
+    <td><%= certification.conserv1_c %></td>
+    <td><%= certification.conserv1_d %></td>
+    <td><%= certification.conserv2_c %></td>
+    <td><%= certification.conserv2_d %></td>
+    <td><%= certification.conserv3_c %></td>
+    <td><%= certification.conserv3_d %></td>
+    <td><%= certification.conserv4_c %></td>
+    <td><%= certification.conserv4_d %></td>
+    <td><%= certification.conserv5_c %></td>
+    <td><%= certification.conserv5_d %></td>
+    <td><%= certification.conserv6_c %></td>
+    <td><%= certification.conserv6_d %></td>
+    <td><%= certification.conserv7_c %></td>
+    <td><%= certification.conserv7_d %></td>
+    <td><%= certification.conserv8_c %></td>
+    <td><%= certification.conserv8_d %></td>
+    <td><%= certification.conserv9_c %></td>
+    <td><%= certification.conserv9_d %></td>
+    <td><%= certification.conserv10_c %></td>
+    <td><%= certification.conserv10_d %></td>
+    <td><%= certification.conserv11_c %></td>
+    <td><%= certification.conserv11_d %></td>
+    <td><%= certification.conserv12_c %></td>
+    <td><%= certification.conserv12_d %></td>
+    <td><%= certification.conserv13_c %></td>
+    <td><%= certification.conserv13_d %></td>
+    <td><%= certification.conserv14_c %></td>
+    <td><%= certification.conserv14 %></td>
+    <td><%= certification.optn1_c %></td>
+    <td><%= certification.optn1_d %></td>
+    <td><%= certification.optn2_c %></td>
+    <td><%= certification.optn2_d %></td>
+    <td><%= certification.optn3_c %></td>
+    <td><%= certification.optn3_d %></td>
+    <td><%= certification.optn4_c %></td>
+    <td><%= certification.optn4_d %></td>
+    <td><%= certification.optn5_c %></td>
+    <td><%= certification.optn5_d %></td>
+    <td><%= link_to 'Show', certification %></td>
+    <td><%= link_to 'Edit', edit_certification_path(certification) %></td>
+    <td><%= link_to 'Destroy', certification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Certification', new_certification_path %>

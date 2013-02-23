@@ -1,0 +1,345 @@
+<%= form_for(@certification) do |f| %>
+  <% if @certification.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@certification.errors.count, "error") %> prohibited this certification from being saved:</h2>
+
+      <ul>
+      <% @certification.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :business_id %><br />
+    <%= f.number_field :business_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cert_date %><br />
+    <%= f.datetime_select :cert_date %>
+  </div>
+  <div class="field">
+    <%= f.label :expiry_date %><br />
+    <%= f.datetime_select :expiry_date %>
+  </div>
+  <div class="field">
+    <%= f.label :mand1 %><br />
+    <%= f.check_box :mand1 %>
+  </div>
+  <div class="field">
+    <%= f.label :mand2 %><br />
+    <%= f.check_box :mand2 %>
+  </div>
+  <div class="field">
+    <%= f.label :mand3 %><br />
+    <%= f.check_box :mand3 %>
+  </div>
+  <div class="field">
+    <%= f.label :mand4 %><br />
+    <%= f.check_box :mand4 %>
+  </div>
+  <div class="field">
+    <%= f.label :mand5 %><br />
+    <%= f.check_box :mand5 %>
+  </div>
+  <div class="field">
+    <%= f.label :safety1_c %><br />
+    <%= f.number_field :safety1_c %>
+  </div>
+  <div class="field">
+    <%= f.label :safety1_d %><br />
+    <%= f.number_field :safety1_d %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition1_c %><br />
+    <%= f.check_box :nutrition1_c %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition1_d %><br />
+    <%= f.number_field :nutrition1_d %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition2_c %><br />
+    <%= f.check_box :nutrition2_c %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition2_d %><br />
+    <%= f.number_field :nutrition2_d %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition3_c %><br />
+    <%= f.check_box :nutrition3_c %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition3_d %><br />
+    <%= f.number_field :nutrition3_d %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition4_c %><br />
+    <%= f.check_box :nutrition4_c %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition4_d %><br />
+    <%= f.number_field :nutrition4_d %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition5_c %><br />
+    <%= f.check_box :nutrition5_c %>
+  </div>
+  <div class="field">
+    <%= f.label :nutrition5_d %><br />
+    <%= f.number_field :nutrition5_d %>
+  </div>
+  <div class="field">
+    <%= f.label :labor1_c %><br />
+    <%= f.text_field :labor1_c %>
+  </div>
+  <div class="field">
+    <%= f.label :labor1_d %><br />
+    <%= f.number_field :labor1_d %>
+  </div>
+  <div class="field">
+    <%= f.label :labor2_c %><br />
+    <%= f.text_field :labor2_c %>
+  </div>
+  <div class="field">
+    <%= f.label :labor2_d %><br />
+    <%= f.number_field :labor2_d %>
+  </div>
+  <div class="field">
+    <%= f.label :labor3_c %><br />
+    <%= f.text_field :labor3_c %>
+  </div>
+  <div class="field">
+    <%= f.label :labor3_d %><br />
+    <%= f.number_field :labor3_d %>
+  </div>
+  <div class="field">
+    <%= f.label :labor4_c %><br />
+    <%= f.text_field :labor4_c %>
+  </div>
+  <div class="field">
+    <%= f.label :labor4_d %><br />
+    <%= f.number_field :labor4_d %>
+  </div>
+  <div class="field">
+    <%= f.label :labor5_c %><br />
+    <%= f.check_box :labor5_c %>
+  </div>
+  <div class="field">
+    <%= f.label :labor5_d %><br />
+    <%= f.number_field :labor5_d %>
+  </div>
+  <div class="field">
+    <%= f.label :labor6_c %><br />
+    <%= f.check_box :labor6_c %>
+  </div>
+  <div class="field">
+    <%= f.label :labor6_d %><br />
+    <%= f.number_field :labor6_d %>
+  </div>
+  <div class="field">
+    <%= f.label :labor7_c %><br />
+    <%= f.check_box :labor7_c %>
+  </div>
+  <div class="field">
+    <%= f.label :labor7_d %><br />
+    <%= f.number_field :labor7_d %>
+  </div>
+  <div class="field">
+    <%= f.label :community1_c %><br />
+    <%= f.check_box :community1_c %>
+  </div>
+  <div class="field">
+    <%= f.label :community1_d %><br />
+    <%= f.number_field :community1_d %>
+  </div>
+  <div class="field">
+    <%= f.label :community2_c %><br />
+    <%= f.check_box :community2_c %>
+  </div>
+  <div class="field">
+    <%= f.label :community2_d %><br />
+    <%= f.number_field :community2_d %>
+  </div>
+  <div class="field">
+    <%= f.label :community3_c %><br />
+    <%= f.check_box :community3_c %>
+  </div>
+  <div class="field">
+    <%= f.label :community3_d %><br />
+    <%= f.number_field :community3_d %>
+  </div>
+  <div class="field">
+    <%= f.label :community4_c %><br />
+    <%= f.check_box :community4_c %>
+  </div>
+  <div class="field">
+    <%= f.label :community4_d %><br />
+    <%= f.number_field :community4_d %>
+  </div>
+  <div class="field">
+    <%= f.label :source1_c %><br />
+    <%= f.text_field :source1_c %>
+  </div>
+  <div class="field">
+    <%= f.label :source1_d %><br />
+    <%= f.number_field :source1_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv1_c %><br />
+    <%= f.check_box :conserv1_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv1_d %><br />
+    <%= f.number_field :conserv1_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv2_c %><br />
+    <%= f.check_box :conserv2_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv2_d %><br />
+    <%= f.number_field :conserv2_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv3_c %><br />
+    <%= f.check_box :conserv3_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv3_d %><br />
+    <%= f.number_field :conserv3_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv4_c %><br />
+    <%= f.check_box :conserv4_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv4_d %><br />
+    <%= f.number_field :conserv4_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv5_c %><br />
+    <%= f.check_box :conserv5_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv5_d %><br />
+    <%= f.number_field :conserv5_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv6_c %><br />
+    <%= f.check_box :conserv6_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv6_d %><br />
+    <%= f.number_field :conserv6_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv7_c %><br />
+    <%= f.check_box :conserv7_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv7_d %><br />
+    <%= f.number_field :conserv7_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv8_c %><br />
+    <%= f.check_box :conserv8_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv8_d %><br />
+    <%= f.number_field :conserv8_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv9_c %><br />
+    <%= f.text_field :conserv9_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv9_d %><br />
+    <%= f.number_field :conserv9_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv10_c %><br />
+    <%= f.check_box :conserv10_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv10_d %><br />
+    <%= f.number_field :conserv10_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv11_c %><br />
+    <%= f.check_box :conserv11_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv11_d %><br />
+    <%= f.number_field :conserv11_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv12_c %><br />
+    <%= f.check_box :conserv12_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv12_d %><br />
+    <%= f.number_field :conserv12_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv13_c %><br />
+    <%= f.check_box :conserv13_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv13_d %><br />
+    <%= f.number_field :conserv13_d %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv14_c %><br />
+    <%= f.check_box :conserv14_c %>
+  </div>
+  <div class="field">
+    <%= f.label :conserv14_d %><br />
+    <%= f.number_field :conserv14_d %>
+  </div>
+  <div class="field">
+    <%= f.label :optn1_c %><br />
+    <%= f.text_field :optn1_c %>
+  </div>
+  <div class="field">
+    <%= f.label :optn1_d %><br />
+    <%= f.number_field :optn1_d %>
+  </div>
+  <div class="field">
+    <%= f.label :optn2_c %><br />
+    <%= f.text_field :optn2_c %>
+  </div>
+  <div class="field">
+    <%= f.label :optn2_d %><br />
+    <%= f.number_field :optn2_d %>
+  </div>
+  <div class="field">
+    <%= f.label :optn3_c %><br />
+    <%= f.text_field :optn3_c %>
+  </div>
+  <div class="field">
+    <%= f.label :optn3_d %><br />
+    <%= f.number_field :optn3_d %>
+  </div>
+  <div class="field">
+    <%= f.label :optn4_c %><br />
+    <%= f.text_field :optn4_c %>
+  </div>
+  <div class="field">
+    <%= f.label :optn4_d %><br />
+    <%= f.number_field :optn4_d %>
+  </div>
+  <div class="field">
+    <%= f.label :optn5_c %><br />
+    <%= f.text_field :optn5_c %>
+  </div>
+  <div class="field">
+    <%= f.label :optn5_d %><br />
+    <%= f.number_field :optn5_d %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,8 @@
 Squareplate::Application.routes.draw do
+  resources :certifications
+
+
+  root to: "businesses#index"
   resources :businesses
 
 
