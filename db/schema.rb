@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223221459) do
+ActiveRecord::Schema.define(:version => 20130223231203) do
 
   create_table "businesses", :force => true do |t|
     t.string   "name"
@@ -114,6 +114,12 @@ ActiveRecord::Schema.define(:version => 20130223221459) do
     t.float    "total_points"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+    t.integer  "optn1_pts"
+    t.integer  "optn2_pts"
+    t.integer  "optn3_pts"
+    t.integer  "optn4_pts"
+    t.integer  "optn5_pts"
+    t.integer  "optional_points"
   end
 
 end

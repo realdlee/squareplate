@@ -3,7 +3,71 @@ class Certification < ActiveRecord::Base
 
     belongs_to :business
 
-    def calculate_healthy_points
-    2*(labor1_c+laboc2_c+labor3_c+labor4_c)
+    before_save
+    def calculate_healthy_work_points
+      labor5_pts = labor5_c ? 1 : 0
+      labor6_pts = labor6_c ? 1 : 0
+      labor7_pts = labor7_c ? 1 : 0
+
+      @certification.healthy_work_points = 2*(labor1_c+labor2_c+labor3_c+labor4_c)+ labor5_pts + .5(labor6_pts +labor7_pts )
+      @certification.save
     end
+
+   def calculate_community_benefits_points
+     community1_pts = community1_c ? 1:0
+     community2_pts = community2_c ? 1:0
+     community3_pts = community3_c ? 1:0
+     community4_pts = community4_c ? 1:0
+     @certification.community_benefits_points = community1_pts+community2_pts+community3_pts+community4_pts
+     @certification.save
+   end
+
+   def calculate_food_sourcing_points
+     @certification.food_sourcing_points = source1_c * 8
+     @certification.save
+   end
+
+   def calculate_healthy_dining_points
+      if safety1_c >1
+        safety1_pts= 0
+      else
+        safety1_pts = 2-safety1_c
+      end
+
+      nutrition1_pts = nutrition1_c ? 1:0
+      nutrition2_pts = nutrition2_c ? 1:0
+      nutrition3_pts = nutrition3_c ? 1:0
+      nutrition4_pts = nutrition4_c ? 1:0
+      nutrition5_pts = nutrition5_c ? 1:0
+      @certification.healthy_dining_points = safety1_pts + nutrition1_pts+nutrition2_pts+nutrition5_pts + (.5*(nutrition3_pts+nutrition4_pts))
+      @certification.save
+   end
+
+   def calculate_conservation_points
+    conserv1_pts = conserv1_c ? 1:0
+    conserv2_pts = conserv2_c ? 1:0
+    conserv3_pts = conserv3_c ? 1:0
+    conserv4_pts = conserv4_c ? 1:0
+    conserv5_pts = conserv5_c ? 1:0
+    conserv6_pts = conserv6_c ? 1:0
+    conserv7_pts = conserv7_c ? 1:0
+    conserv8_pts = conserv8_c ? 1:0
+    conserv10_pts = conserv10_c ? 1:0
+    conserv11_pts = conserv11_c ? 1:0
+    conserv12_pts = conserv12_c ? 1:0
+    conserv13_pts = conserv13_c ? 1:0
+    conserv14_pts = conserv14_c ? 1:0
+
+     @certification.conservation_points = (conserv9_c*4)+conserv1_pts+(.25)(conserv2_pts+conserv3_pts+conserv4_pts+conserv5_pts+conserv6_pts+conserv7_pts+conserv8_pts+conserv10_pts+conserv11_pts+conserv12_pts+conserv13_pts+conserv14_pts)
+   end
+
+   def calculate_optional_points
+     @certification.optional_points = optn1_pts+optn2_pts+optn3_pts+optn4_pts+optn5_pts
+   end
+
+   def calculate_total_points
+     @certification.total_points = healthy_dining_points+healthy_work_points+community_benefits_points+food_sourcing_points+conservation_points+optional_points
+   end
+
+
 end
