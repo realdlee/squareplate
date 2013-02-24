@@ -1,0 +1,64 @@
+/* CSS file for Squareplate */
+
+.spacer {
+    clear: both ;
+}
+.logo {
+    display: "block" ;
+    float: right;
+    clear: both ;
+}
+.title {
+    font-size: 3em;
+}
+
+.cat_group { 
+    padding: 5px ;
+    /*
+    text-align: center ;
+    color: #704000 ;
+    */
+}
+
+.rating { 
+    padding: 10px ;
+    text-align: center ;
+    border: 1px solid ;
+    width: 70px ;
+}
+.cat_name { 
+    display:inline-block;
+    text-align: center ;
+    padding: 5px ;
+    width: 100px;
+    color: #704000 ;
+    /*
+    border: 1px solid ;
+    */
+}
+
+.overall_score { 
+    font-size: 3em;
+    text-align: center ;
+    font-weight:bold;
+    padding: 10px ;
+    /*
+    color: #704000 ;
+    */
+}
+.overall_rating { 
+    font-size: 1.1em;
+    text-align: center ;
+    /*
+    color: #704000 ;
+    */
+}
+.cat_score { 
+    font-size: 1.4em;
+    text-align: center ;
+    font-weight:bold;
+    padding: 5px ;
+    /*
+    color: #704000 ;
+    */
+}
