@@ -12,7 +12,7 @@
     font-size: 3em;
 }
 
-.cat_group { 
+.cat_group {
     padding: 5px ;
     /*
     text-align: center ;
@@ -20,13 +20,13 @@
     */
 }
 
-.rating { 
+.rating {
     padding: 10px ;
     text-align: center ;
     border: 1px solid ;
-    width: 70px ;
+    width: 110px ;
 }
-.cat_name { 
+.cat_name {
     display:inline-block;
     text-align: center ;
     padding: 5px ;
@@ -37,7 +37,7 @@
     */
 }
 
-.overall_score { 
+.overall_score {
     font-size: 3em;
     text-align: center ;
     font-weight:bold;
@@ -46,14 +46,14 @@
     color: #704000 ;
     */
 }
-.overall_rating { 
+.overall_rating {
     font-size: 1.1em;
     text-align: center ;
     /*
     color: #704000 ;
     */
 }
-.cat_score { 
+.cat_score {
     font-size: 1.4em;
     text-align: center ;
     font-weight:bold;
