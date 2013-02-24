@@ -10,7 +10,7 @@ class BusinessesController < ApplicationController
         :conversation
       ],
       :data => Business.all.collect do |bus|
-        if cert = business.certifications.first
+        if cert = bus.certifications.first
           {
             :tid => bus.id,
             :name => bus.name,
@@ -28,10 +28,13 @@ class BusinessesController < ApplicationController
 
   def bootstrap_category_hash(points, max)
     {
-      :points => points,
+      :points => points || 0,
       :max_points => max,
-      :percentage => points / max
+      :percentage => (points ||0) / max
     }
+  end
+
+  def report
   end
 
   # GET /businesses

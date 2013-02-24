@@ -2,7 +2,7 @@ var json  = {} ;
 
 function load_data() {
     console.log( "loading" );
-    new Ajax.Request('public/sample-report.json', {
+    new Ajax.Request('/data/report.json', {
         method:'get',
         onSuccess: function(transport){
             json = transport.responseText.evalJSON();
@@ -114,7 +114,7 @@ function updateCategory( cat , rec ) {
     var imgUrl = "<img src=" + url + ">";
 
     var chartID = "g_" + cat ;
-     
+
 
     $(chartID).update( imgUrl );
     $(cat).update( rec[cat].points );
@@ -127,7 +127,7 @@ Event.observe(window, 'load', function() {
 
     // add observable behaviours
     $('placelist').observe('change' , function() {
-        // 
+        //
         var id = $('placelist').getValue();
         console.log ( "select!!" , id );
 

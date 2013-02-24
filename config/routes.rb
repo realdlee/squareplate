@@ -2,9 +2,9 @@ Squareplate::Application.routes.draw do
   resources :certifications
 
 
-  root to: "businesses#index"
+  root to: "businesses#report"
 
-  get "/data/report.json", :to => "businesses#boostrap"
+  get "/data/report.json", :to => "businesses#bootstrap"
 
   resources :businesses
 
