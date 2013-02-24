@@ -1,4 +1,39 @@
 class BusinessesController < ApplicationController
+
+  def bootstrap
+    render :json => {
+      :categories => [
+        :healthy_dining,
+        :healthy_work,
+        :community_benefits,
+        :food_sourcing,
+        :conversation
+      ],
+      :data => Business.all.collect do |bus|
+        if cert = business.certifications.first
+          {
+            :tid => bus.id,
+            :name => bus.name,
+            :score => cert.total_points,
+            :healthy_dining => bootstrap_category_hash(cert.healthy_dining_points, 6),
+            :healthy_work => bootstrap_category_hash(cert.healthy_work_points, 10),
+            :community_benefits => bootstrap_category_hash(cert.community_benefits_points, 4),
+            :food_sourcing => bootstrap_category_hash(cert.food_sourcing_points, 8),
+            :conversation => bootstrap_category_hash(cert.conversation_points, 8)
+          }
+        end
+      end.compact
+    }
+  end
+
+  def bootstrap_category_hash(points, max)
+    {
+      :points => points,
+      :max_points => max,
+      :percentage => points / max
+    }
+  end
+
   # GET /businesses
   # GET /businesses.json
   def index

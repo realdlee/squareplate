@@ -1,0 +1,47 @@
+{
+   "categories" : [ "health" , "safety" , "other" ],
+   "data" : [
+      {
+         "tid" : "55565",
+         "name" : "MY Green restaurant",
+         "score" : "22",
+         "rating" : "gold",
+         "health" : {
+            "points": "1",
+            "percentage": "5",
+            "max_points": "10"
+         },
+         "safety" : {
+            "points": "1",
+            "percentage": "1",
+            "max_points": "1"
+         },
+         "other" : {
+            "points": "1",
+            "percentage": "1",
+            "max_points": "1"
+         }
+      },
+      {
+         "tid" : "4453",
+         "name" : "MY Otjer restaurant",
+         "score" : "15",
+         "rating" : "silver",
+         "health" : {
+            "points": "1",
+            "percentage": "1",
+            "max_points": "1"
+         },
+         "safety" : {
+            "points": "1",
+            "percentage": "1",
+            "max_points": "1"
+         },
+         "other" : {
+            "points": "1",
+            "percentage": "1",
+            "max_points": "1"
+         }
+      }
+    ]
+}
