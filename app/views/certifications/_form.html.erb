@@ -24,27 +24,27 @@
     <%= f.datetime_select :expiry_date %>
   </div>
   <div class="field">
-    <%= f.label :mand1 %><br />
+    <%= f.label :mand1, "Has the business had any suspensions of its permit to operate in the past 3 years?" %><br />
     <%= f.check_box :mand1 %>
   </div>
   <div class="field">
-    <%= f.label :mand2 %><br />
+    <%= f.label :mand2, "Does the business have at least one certified food safety manager on site when operating?" %><br />
     <%= f.check_box :mand2 %>
   </div>
   <div class="field">
-    <%= f.label :mand3 %><br />
+    <%= f.label :mand3, "Has the business had any uncorrected or repeated Federal, State, or Local labor violatio in the past three years?" %><br />
     <%= f.check_box :mand3 %>
   </div>
   <div class="field">
-    <%= f.label :mand4 %><br />
+    <%= f.label :mand4, "Has the business posted required employee labor law notifications?" %><br />
     <%= f.check_box :mand4 %>
   </div>
   <div class="field">
-    <%= f.label :mand5 %><br />
+    <%= f.label :mand5, "Has the business affirmed and posted Responsible Restaurant Code of Conduct (see page 12)?" %><br />
     <%= f.check_box :mand5 %>
   </div>
   <div class="field">
-    <%= f.label :safety1_c %><br />
+    <%= f.label :safety1_c, "How many high-risk food safety violation has the business had in the past year"%><br />
     <%= f.number_field :safety1_c %>
   </div>
   <div class="field">
@@ -52,7 +52,7 @@
     <%= f.number_field :safety1_d %>
   </div>
   <div class="field">
-    <%= f.label :nutrition1_c %><br />
+    <%= f.label :nutrition1_c,"Do 40% of menu offerings(excluding dessert) include at least one serving of fruits or vegetables" %><br />
     <%= f.check_box :nutrition1_c %>
   </div>
   <div class="field">
@@ -60,7 +60,7 @@
     <%= f.number_field :nutrition1_d %>
   </div>
   <div class="field">
-    <%= f.label :nutrition2_c %><br />
+    <%= f.label :nutrition2_c,"Are at least 25% of menu items available as smaller or reduced(1/2 - 1/3) portion sizes"%><br />
     <%= f.check_box :nutrition2_c %>
   </div>
   <div class="field">
@@ -68,7 +68,7 @@
     <%= f.number_field :nutrition2_d %>
   </div>
   <div class="field">
-    <%= f.label :nutrition3_c %><br />
+    <%= f.label :nutrition3_c,"Are calorically sweetened beverages excluded from the price of any meals or food menu items?"%><br />
     <%= f.check_box :nutrition3_c %>
   </div>
   <div class="field">
@@ -76,7 +76,7 @@
     <%= f.number_field :nutrition3_d %>
   </div>
   <div class="field">
-    <%= f.label :nutrition4_c %><br />
+    <%= f.label :nutrition4_c ,"Are at least 50% of beverages offered on the menu not calorically sweetened?"%><br />
     <%= f.check_box :nutrition4_c %>
   </div>
   <div class="field">
@@ -84,7 +84,7 @@
     <%= f.number_field :nutrition4_d %>
   </div>
   <div class="field">
-    <%= f.label :nutrition5_c %><br />
+    <%= f.label :nutrition5_c , "Is nutritional information provided on menu, nutritional menu, insert, or other source at point of purchase or offering?"%><br />
     <%= f.check_box :nutrition5_c %>
   </div>
   <div class="field">
@@ -92,15 +92,16 @@
     <%= f.number_field :nutrition5_d %>
   </div>
   <div class="field">
-    <%= f.label :labor1_c %><br />
-    <%= f.text_field :labor1_c %>
+    <%= f.label :labor1_c, "What is the percentage of non-tipped employees making a minimum hourly wage equivalent to the regional self sufficiency wage, $12.25? [2 points;pro-rated by percent of employees meeting criteria]" %><br />
+    <%= f.text_field :labor1_c%>
   </div>
   <div class="field">
     <%= f.label :labor1_d %><br />
     <%= f.number_field :labor1_d %>
   </div>
   <div class="field">
-    <%= f.label :labor2_c %><br />
+    <%= f.label :labor2_c ,"What is the percent of employees earning at least 1hour of paid leave for illness every 30 hours worked?
+      (.0333 hour earned per hour worked) [2 points; prorated by percent of employees meeting criteria]"%><br />
     <%= f.text_field :labor2_c %>
   </div>
   <div class="field">
@@ -108,7 +109,11 @@
     <%= f.number_field :labor2_d %>
   </div>
   <div class="field">
-    <%= f.label :labor3_c %><br />
+    <%= f.label :labor3_c, "What is the percent of employees earning at least 1
+hour of paid vacation for every 30 hours worked?
+(Equivalent to ~ 8 days of paid vacation per yearfor
+full time employees). [2 points; pro-rated by percent
+of employees meeting criteria]"%><br />
     <%= f.text_field :labor3_c %>
   </div>
   <div class="field">
@@ -116,7 +121,11 @@
     <%= f.number_field :labor3_d %>
   </div>
   <div class="field">
-    <%= f.label :labor4_c %><br />
+    <%= f.label :labor4_c ,"What is the percent of employees earning at least 1
+hour of paid vacation for every 30 hours worked?
+(Equivalent to ~ 8 days of paid vacation per yearfor
+full time employees). [2 points; pro-rated by percent
+of employees meeting criteria]"%><br />
     <%= f.text_field :labor4_c %>
   </div>
   <div class="field">
@@ -124,7 +133,12 @@
     <%= f.number_field :labor4_d %>
   </div>
   <div class="field">
-    <%= f.label :labor5_c %><br />
+    <%= f.label :labor5_c,"Is the three year average rate of recordable
+occupational injuries (e.g. injuries that involve loss of
+consciousness, job transfer, days away from work, or
+medical treatment beyond first aid)less than 50% of
+industry average?. *Use attached worksheet on p. 14
+for calculation* [1 point]" %><br />
     <%= f.check_box :labor5_c %>
   </div>
   <div class="field">
@@ -132,7 +146,9 @@
     <%= f.number_field :labor5_d %>
   </div>
   <div class="field">
-    <%= f.label :labor6_c %><br />
+    <%= f.label :labor6_c ,"Does the employer offer at least one pathway to
+promotional opportunities or career development
+within the organization? [.5 point]"%><br />
     <%= f.check_box :labor6_c %>
   </div>
   <div class="field">
@@ -140,15 +156,21 @@
     <%= f.number_field :labor6_d %>
   </div>
   <div class="field">
-    <%= f.label :labor7_c %><br />
+    <%= f.label :labor7_c, "Does the business conduct semi-annual employee
+performance reviews documenting employer and
+employee goals and objectives and their
+achievement? [.5 point]"%><br />
     <%= f.check_box :labor7_c %>
   </div>
   <div class="field">
-    <%= f.label :labor7_d %><br />
+    <%= f.label :labor7_d%><br />
     <%= f.number_field :labor7_d %>
   </div>
   <div class="field">
-    <%= f.label :community1_c %><br />
+    <%= f.label :community1_c,"Does the business make monetary or in-kind (e.g. food)
+donations to community nonprofit organizations or
+community non-profit activities that are equivalent to
+0.5% of total food sales or 5% of net profit? [1 point]"%><br />
     <%= f.check_box :community1_c %>
   </div>
   <div class="field">
@@ -156,7 +178,7 @@
     <%= f.number_field :community1_d %>
   </div>
   <div class="field">
-    <%= f.label :community2_c %><br />
+    <%= f.label :community2_c ,"Does the business participate in a local job training program? [1 point]"%><br />
     <%= f.check_box :community2_c %>
   </div>
   <div class="field">
@@ -164,7 +186,7 @@
     <%= f.number_field :community2_d %>
   </div>
   <div class="field">
-    <%= f.label :community3_c %><br />
+    <%= f.label :community3_c, "Does the business allow itsfull-time employees 20 paid hours annually for community service activity? [1 point]"%><br />
     <%= f.check_box :community3_c %>
   </div>
   <div class="field">
@@ -172,7 +194,8 @@
     <%= f.number_field :community3_d %>
   </div>
   <div class="field">
-    <%= f.label :community4_c %><br />
+    <%= f.label :community4_c ,"Does the business participate in the Federal
+Supplemental Nutrition Assistance Program? [1 point]"%><br />
     <%= f.check_box :community4_c %>
   </div>
   <div class="field">
@@ -180,7 +203,7 @@
     <%= f.number_field :community4_d %>
   </div>
   <div class="field">
-    <%= f.label :source1_c %><br />
+    <%= f.label :source1_c ,"What percentage of all food purchased meets a Square Plate recognized sustainable certification standard?*Use attached Sustainable Food Procurement worksheet p. 15 to calculate percentage and awarded points.* (8points maximum; points pro-rated by percentage of food expenses that are purchased from qualified sources)"%><br />
     <%= f.text_field :source1_c %>
   </div>
   <div class="field">
@@ -188,7 +211,9 @@
     <%= f.number_field :source1_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv1_c %><br />
+    <%= f.label :conserv1_c ,"Is at least 75% of the solid waste produced by the
+business diverted from landfills (where composting
+service available)? [1point]"%><br />
     <%= f.check_box :conserv1_c %>
   </div>
   <div class="field">
@@ -196,7 +221,8 @@
     <%= f.number_field :conserv1_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv2_c %><br />
+    <%= f.label :conserv2_c, "Does the business recycle or compost all its used
+cooking oil? [.25 point]" %><br />
     <%= f.check_box :conserv2_c %>
   </div>
   <div class="field">
@@ -204,7 +230,7 @@
     <%= f.number_field :conserv2_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv3_c %><br />
+    <%= f.label :conserv3_c,"Does the business use only recyclable, compostable or reusable bags, service ware and containers? [.25 point]"%><br />
     <%= f.check_box :conserv3_c %>
   </div>
   <div class="field">
@@ -212,7 +238,8 @@
     <%= f.number_field :conserv3_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv4_c %><br />
+    <%= f.label :conserv4_c,"Does the business use only reusable dine-in service
+ware and cloth napkins? [.25 point]"%><br />
     <%= f.check_box :conserv4_c %>
   </div>
   <div class="field">
@@ -220,7 +247,10 @@
     <%= f.number_field :conserv4_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv5_c %><br />
+    <%= f.label :conserv5_c,"Does the business use only paper products with a
+minimum 30% post-consumer waste (PCW) recycled
+content? (paper towels, napkins, toilet paper) [.25
+point]"%><br />
     <%= f.check_box :conserv5_c %>
   </div>
   <div class="field">
@@ -228,7 +258,8 @@
     <%= f.number_field :conserv5_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv6_c %><br />
+    <%= f.label :conserv6_c,"Does the business use only electric hand dryers in
+bathrooms? (No use of paper towels) [.25 point]"%><br />
     <%= f.check_box :conserv6_c %>
   </div>
   <div class="field">
@@ -236,7 +267,9 @@
     <%= f.number_field :conserv6_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv7_c %><br />
+    <%= f.label :conserv7_c,"Does the business use only approved green cleaning
+products?Green Seal certified; Good Guide (Rated at 8
+or higher); or SF Approved. [.25 point]"%><br />
     <%= f.check_box :conserv7_c %>
   </div>
   <div class="field">
@@ -244,7 +277,8 @@
     <%= f.number_field :conserv7_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv8_c %><br />
+    <%= f.label :conserv8_c,"Does the business use only green laundry services? [.25
+point]"%><br />
     <%= f.check_box :conserv8_c %>
   </div>
   <div class="field">
@@ -252,7 +286,12 @@
     <%= f.number_field :conserv8_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv9_c %><br />
+    <%= f.label :conserv9_c,"What percent of kitchen equipment or appliances are
+qualified as ENERGY STAR® or equivalent? [up to 4
+points]
+ENERGY STAR® eligible equipment includes
+dishwashers, refrigerators, freezers, ice makers; steam
+cookers; ovens; fryers; griddles; hot holding cabinets. " %><br />
     <%= f.text_field :conserv9_c %>
   </div>
   <div class="field">
@@ -260,7 +299,8 @@
     <%= f.number_field :conserv9_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv10_c %><br />
+    <%= f.label :conserv10_c, "Does the business uses energy-efficient lighting and exit signs (e.g. compact fluorescents, LED, infrared, or cold
+      cathode)? [.25 point]."%><br />
     <%= f.check_box :conserv10_c %>
   </div>
   <div class="field">
@@ -268,7 +308,8 @@
     <%= f.number_field :conserv10_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv11_c %><br />
+    <%= f.label :conserv11_c,"Does the business use occupancy sensors, daylight
+    controls, or timers in lighted areas? [.25 point]"%><br />
     <%= f.check_box :conserv11_c %>
   </div>
   <div class="field">
@@ -276,7 +317,8 @@
     <%= f.number_field :conserv11_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv12_c %><br />
+    <%= f.label :conserv12_c,"Are all kitchen faucets rated at a flow rate of 1.5 gpm and commercial pre-rinse spray valves at a flow rate ≤
+1.6 (gpm)? [.25 point]"%><br />
     <%= f.check_box :conserv12_c %>
   </div>
   <div class="field">
@@ -284,7 +326,7 @@
     <%= f.number_field :conserv12_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv13_c %><br />
+    <%= f.label :conserv13_c,"Are all lavatory (restroom) faucets are rated at 0.5 (gpm) at 60 (psi)? [.25 point]"%><br />
     <%= f.check_box :conserv13_c %>
   </div>
   <div class="field">
@@ -292,7 +334,7 @@
     <%= f.number_field :conserv13_d %>
   </div>
   <div class="field">
-    <%= f.label :conserv14_c %><br />
+    <%= f.label :conserv14_c, "Are all toilets rated at 1.28 gallons per flush (gpf) or less or dual-flush 1.6 gpf max and are all urinals are rated at 0.5 (gpf) or waterless? [.25 point]"%><br />
     <%= f.check_box :conserv14_c %>
   </div>
   <div class="field">
@@ -300,7 +342,7 @@
     <%= f.number_field :conserv14_d %>
   </div>
   <div class="field">
-    <%= f.label :optn1_c %><br />
+    <%= f.label :optn1_c ,"Optional criteria"%><br />
     <%= f.text_field :optn1_c %>
   </div>
   <div class="field">
@@ -308,7 +350,7 @@
     <%= f.number_field :optn1_d %>
   </div>
   <div class="field">
-    <%= f.label :optn2_c %><br />
+    <%= f.label :optn2_c,"Optional criteria"%><br />
     <%= f.text_field :optn2_c %>
   </div>
   <div class="field">
@@ -316,7 +358,7 @@
     <%= f.number_field :optn2_d %>
   </div>
   <div class="field">
-    <%= f.label :optn3_c %><br />
+    <%= f.label :optn3_c,"Optional criteria"%><br />
     <%= f.text_field :optn3_c %>
   </div>
   <div class="field">
@@ -324,7 +366,7 @@
     <%= f.number_field :optn3_d %>
   </div>
   <div class="field">
-    <%= f.label :optn4_c %><br />
+    <%= f.label :optn4_c,"Optional criteria"%><br />
     <%= f.text_field :optn4_c %>
   </div>
   <div class="field">
