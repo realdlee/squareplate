@@ -1,10 +1,12 @@
 var json  = {} ;
 
 function load_data() {
+    console.log( "loading" );
     new Ajax.Request('public/sample-report.json', {
         method:'get',
         onSuccess: function(transport){
             json = transport.responseText.evalJSON();
+            console.log ( "loaded" , json );
             render_data( json );
         }
     });
@@ -77,15 +79,28 @@ function updateCategory( cat , rec ) {
 
     // Generate a URL for google charts
     var url = "http://chart.apis.google.com/chart?";
-
-        url += "?chbh=a,6";
+        url += "?chbh=a";
         url += "&chs=110x20";
-        url += "&cht=bvg";
+        url += "&cht=bhs";
         url += "&chco=A2C180";
+        //url += "&chd=t:5";
+        url += "&chd=t:"+rec[cat].percentage;
+        //url += "&chds=0,10";
+        url += "&chds=0,"+rec[cat].max_points;
+
+        console.log( rec[cat].percentage );
+        console.log( rec[cat].max_points );
+
         // scaling : normalist and constant
         //url += "&chds=0,93.333";
-        url += "&chds=0,5";
 
+/*
+
+   &chbh=a
+   &chs=300x225
+   &cht=bhs
+   &chco=A2C180
+   &chd=t:10,50,60,80,40,60,30
         // now walk the values in the sub data to chart them
         // the 'NAME' is based on category title
         // and we just extract the values
@@ -94,6 +109,7 @@ function updateCategory( cat , rec ) {
         url += "&chd=t:"+scoreString;
 
         //url += "&chtt=Vertical+bar+chart";
+*/
 
     var imgUrl = "<img src=" + url + ">";
 
@@ -101,7 +117,7 @@ function updateCategory( cat , rec ) {
      
 
     $(chartID).update( imgUrl );
-    $(cat).update( rec[cat] );
+    $(cat).update( rec[cat].points );
 
 }
 
