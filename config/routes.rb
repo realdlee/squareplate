@@ -3,6 +3,9 @@ Squareplate::Application.routes.draw do
 
 
   root to: "businesses#index"
+
+  get "/data/report.json", :to => "businesses#boostrap"
+
   resources :businesses
 
 
