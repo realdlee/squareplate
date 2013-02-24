@@ -2,7 +2,7 @@ var json  = {} ;
 
 function load_data() {
     console.log( "loading" );
-    new Ajax.Request('/data/report.json', {
+    new Ajax.Request('data/report.json', {
         method:'get',
         onSuccess: function(transport){
             json = transport.responseText.evalJSON();
@@ -54,6 +54,8 @@ function display_record( rec , categories ) {
     // raw rendering functin for a single record,
     // we also pass a list of categories as an array
 
+    console.log( "rendering record" , rec ) ;
+
     console.log ( rec ) ;
 
     // dynamically walk the categories , and update some fields
@@ -73,6 +75,7 @@ function updateCategory( cat , rec ) {
     // pass the line and the overall record
     if ( ! $(cat) ) { return; }
     if ( ! rec ) { return; }
+    if ( ! rec[cat] ) { return; }
 
     // ok, continue
     console.log ( "in : updating line :" , cat );
@@ -88,8 +91,7 @@ function updateCategory( cat , rec ) {
         //url += "&chds=0,10";
         url += "&chds=0,"+rec[cat].max_points;
 
-        console.log( rec[cat].percentage );
-        console.log( rec[cat].max_points );
+        //console.log( rec[cat].percentage, rec[cat].max_points );
 
         // scaling : normalist and constant
         //url += "&chds=0,93.333";
